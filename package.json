@@ -27,6 +27,7 @@
   "homepage": "https://github.com/merivercap/100x-Backend#readme",
   "dependencies": {
     "ajv": "^6.5.2",
+    "apollo-server": "^2.4.8",
     "apollo-server-express": "^2.4.8",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.4",
