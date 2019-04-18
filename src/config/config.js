@@ -28,17 +28,17 @@ const {
     },
     development: {
       connection: { name: RDS_DB_NAME, username: RDS_USERNAME, password: RDS_PASSWORD },
-      sequelizeOpts: { dialect: 'mysql', host: RDS_HOSTNAME, port: RDS_PORT, operatorsAliases: false, maxConcurrentQueries: 100, pool: { maxConnections: 5, maxIdleTime: 30, idle: 20000, acquire: 20000}, language: 'en'},
+      sequelizeOpts: { dialect: 'postgres', host: RDS_HOSTNAME, port: RDS_PORT, operatorsAliases: false, maxConcurrentQueries: 100, pool: { maxConnections: 5, maxIdleTime: 30, idle: 20000, acquire: 20000}, language: 'en'},
       server: { port: SERVER_PORT }
     },
     staging: {
       connection: { name: RDS_DB_NAME, username: RDS_USERNAME, password: RDS_PASSWORD },
-      sequelizeOpts: { dialect: 'mysql', host: RDS_HOSTNAME, port: RDS_PORT, operatorsAliases: false },
+      sequelizeOpts: { dialect: 'postgres', host: RDS_HOSTNAME, port: RDS_PORT, operatorsAliases: false },
       server: { port: SERVER_PORT },
     },
     production: {
       connection: { name: RDS_DB_NAME, username: RDS_USERNAME, password: RDS_PASSWORD },
-      sequelizeOpts: { dialect: 'mysql', host: RDS_HOSTNAME, port: RDS_PORT, operatorsAliases: false },
+      sequelizeOpts: { dialect: 'postgres', host: RDS_HOSTNAME, port: RDS_PORT, operatorsAliases: false },
       server: { port: SERVER_PORT },
     },
   };
