@@ -2,29 +2,29 @@
 
 Backend for ChartViz, Daily Stockcharts for top 500 traded companies.
 
-# Configuration and Setup...
+# Configuration and Setup
 
-This app is supported by an AWS RDS postgres instance.  Credentials should be placed in src/config/rds.js and named like this:
+This app is supported by an AWS RDS postgres instance.  Credentials should be placed in src/config/rds.js and named like this: <br>
 
-module.exports.APP_ENV = APP_ENV;
-module.exports.RDS_HOSTNAME = RDS_HOSTNAME;
-module.exports.RDS_USERNAME = RDS_USERNAME;
-module.exports.RDS_PASSWORD = RDS_PASSWORD;
-module.exports.RDS_PORT = RDS_PORT;
-module.exports.RDS_DB_NAME = RDS_DB_NAME;
+module.exports.APP_ENV = APP_ENV; <br>
+module.exports.RDS_HOSTNAME = RDS_HOSTNAME;<br>
+module.exports.RDS_USERNAME = RDS_USERNAME;<br>
+module.exports.RDS_PASSWORD = RDS_PASSWORD;<br>
+module.exports.RDS_PORT = RDS_PORT;<br>
+module.exports.RDS_DB_NAME = RDS_DB_NAME;<br>
 
 Our 3rd party data is supported by a free API key from Alpha Vantage.  Sign up for an API key [here](https://www.alphavantage.co/documentation/). 
-Credentials should be placed in src/config/alpha.js and named like this:
+Credentials should be placed in src/config/alpha.js and named like this: <br>
 
 module.exports.ALPHA_API_KEY = ALPHA_API_KEY;
 
 # Techs 
 
-Node - Express
-GraphQL
-AWS RDS Postgresql
-Typescript?
-Jest
+Node - Express<br>
+GraphQL<br>
+AWS RDS Postgresql<br>
+Typescript?<br>
+Jest<br>
 
 # 3rd Party Data
 

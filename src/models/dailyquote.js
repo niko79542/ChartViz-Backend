@@ -1,7 +1,7 @@
   
 "use strict";
 module.exports = (sequelize, DataTypes) => {
-  var DailyQuotes = sequelize.define('DailyQuotes', {
+  var DailyQuote = sequelize.define('DailyQuote', {
     date: {
         type: DataTypes.DATE,
         defaultValue: DataTypes.NOW,
@@ -36,13 +36,13 @@ module.exports = (sequelize, DataTypes) => {
     }
   });
 
-  DailyQuotes.associate = models => {
-      models.DailyQuotes.belongsTo(models.Tickers, {
+  DailyQuote.associate = models => {
+      models.DailyQuote.belongsTo(models.Ticker, {
           foreignKey: {
               allowNull: false
           }
       });
   };
 
-  return DailyQuotes;
+  return DailyQuote;
 };

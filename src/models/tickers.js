@@ -1,7 +1,7 @@
   
 "use strict";
 module.exports = (sequelize, DataTypes) => {
-  const Tickers = sequelize.define('Tickers', {
+  const Ticker = sequelize.define('Ticker', {
     ticker: {
       type: DataTypes.STRING,
       allowNull: false, 
@@ -17,9 +17,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   });
 
-  Tickers.associate = models => {
-    models.Tickers.hasMany(models.DailyQuotes);
+  Ticker.associate = models => {
+    models.Ticker.hasMany(models.DailyQuote);
   };
 
-  return Tickers;
+  return Ticker;
 };
