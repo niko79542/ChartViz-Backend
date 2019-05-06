@@ -2,7 +2,11 @@
 "use strict";
 module.exports = (sequelize, DataTypes) => {
   const Tickers = sequelize.define('Tickers', {
-    ticker: DataTypes.STRING,
+    ticker: {
+      type: DataTypes.STRING,
+      allowNull: false, 
+
+    },
     updatedAt: DataTypes.INTEGER,
     createdAt: DataTypes.INTEGER,
     id: {
