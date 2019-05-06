@@ -5,10 +5,12 @@ const typeDefs = require('./controllers/graphql/types');
 
 const db = require('./models');
 const config = require('./config/config');
+const batchUpdate = require('./services/initializeTickerHistory');
 
 
 db.sequelize.sync({force: true}).then(() => {
-  });
+  batchUpdate();
+});
 
 const server = new ApolloServer({ typeDefs,
      resolvers,
