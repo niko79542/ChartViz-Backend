@@ -1,9 +1,8 @@
   
 "use strict";
 module.exports = (sequelize, DataTypes) => {
-  var Books = sequelize.define('Books', {
-    title: DataTypes.STRING,
-    author: DataTypes.STRING,
+  const Tickers = sequelize.define('Tickers', {
+    ticker: DataTypes.STRING,
     updatedAt: DataTypes.INTEGER,
     createdAt: DataTypes.INTEGER,
     id: {
@@ -13,5 +12,10 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true
     }
   });
-  return Books;
+
+  Tickers.associate = models => {
+    models.Tickers.hasMany(models.DailyQuotes);
+  };
+
+  return Tickers;
 };

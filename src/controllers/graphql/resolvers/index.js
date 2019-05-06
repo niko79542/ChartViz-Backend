@@ -1,18 +1,28 @@
-const books = [
+const dailyQuotes = [
     {
-      title: 'Harry Potter and the Chamber of Secrets',
-      author: 'J.K. Rowling',
+      ticker: {ticker: 'AAPL'},
+      date: new Date(),
+      close: 11.14,
+      open: 10.50,
+      low: 10.15,
+      high: 11.15,
+      volume: 15000,
     },
     {
-      title: 'Jurassic Park',
-      author: 'Michael Crichton',
+      ticker: {ticker: 'AAPL'},
+      date: new Date(),
+      close: 11.14,
+      open: 10.50,
+      low: 10.15,
+      high: 11.15,
+      volume: 15000,
     },
   ];
   
 
 module.exports = {
     Query: {
-      books: () => books,
+      quotes: () => dailyQuotes,
     },
 };
   

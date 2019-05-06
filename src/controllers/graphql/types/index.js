@@ -1,12 +1,25 @@
 const { gql } = require('apollo-server');
 
 module.exports = gql`
-  type Book {
-    title: String
-    author: String
-  }
+scalar Date
 
-  type Query {
-    books: [Book]
-  }
+type Ticker {
+    ticker: String
+    dailyquotes: [DailyQuote]
+}
+
+type DailyQuote {
+    date: Date
+    close: Float
+    open: Float
+    high: Float 
+    low: Float
+    volume: Float
+    ticker: Ticker!
+
+}
+
+type Query {
+    quotes: [DailyQuote]
+}
 `;
