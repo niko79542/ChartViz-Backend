@@ -5,16 +5,11 @@ module.exports = (sequelize, DataTypes) => {
     ticker: {
       type: DataTypes.STRING,
       allowNull: false, 
+      primaryKey: true,
 
     },
-    updatedAt: DataTypes.INTEGER,
-    createdAt: DataTypes.INTEGER,
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      allowNull: false,
-      autoIncrement: true
-    }
+    updatedAt: DataTypes.DATE,
+    createdAt: DataTypes.DATE
   });
 
   Ticker.associate = models => {

@@ -1,28 +1,13 @@
-const dailyQuotes = [
-    {
-      ticker: {ticker: 'AAPL'},
-      date: new Date(),
-      close: 11.14,
-      open: 10.50,
-      low: 10.15,
-      high: 11.15,
-      volume: 15000,
-    },
-    {
-      ticker: {ticker: 'AAPL'},
-      date: new Date(),
-      close: 11.14,
-      open: 10.50,
-      low: 10.15,
-      high: 11.15,
-      volume: 15000,
-    },
-  ];
-  
+db = require('../../../models');
+const DailyQuote = db.sequelize.models.DailyQuote;
 
 module.exports = {
     Query: {
-      quotes: () => dailyQuotes,
+      quotes: async (_, args) => {
+        return await DailyQuote.findAll({
+          limit: 10,
+        })
+      }
     },
 };
   

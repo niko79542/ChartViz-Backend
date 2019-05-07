@@ -2,10 +2,9 @@
 "use strict";
 module.exports = (sequelize, DataTypes) => {
   var DailyQuote = sequelize.define('DailyQuote', {
-    date: {
-        type: DataTypes.DATE,
-        defaultValue: DataTypes.NOW,
-        field: 'date',
+    mmddyy: {
+        type: DataTypes.STRING,
+        field: 'mmddyy',
         allowNull: false
     },
     close: {
@@ -15,17 +14,22 @@ module.exports = (sequelize, DataTypes) => {
     },
     open: {
         type: DataTypes.FLOAT,
-        field: 'close',
+        field: 'open',
         allowNull: false
     },
     high: {
         type: DataTypes.FLOAT,
-        field: 'close',
+        field: 'high',
         allowNull: false
     },
     low: {
         type: DataTypes.FLOAT,
-        field: 'close',
+        field: 'low',
+        allowNull: false
+    },
+    volume: {
+        type: DataTypes.FLOAT,
+        field: 'volume',
         allowNull: false
     },
     id: {
